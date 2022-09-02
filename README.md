@@ -68,9 +68,10 @@ older version. Please update the wiki if you discover outdated examples.
 ## Goals
 
 - Have a basic debugger in Neovim.
-- Extensibility and double as a DAP client library. This allows other plugins
-  to extend the debugging experience. Either by improving the UI or by making
-  it easier to debug parts of an application.
+- Extensibility and double as a DAP client library.
+    This allows other plugins  to extend the debugging experience.
+    Either by improving the UI
+    or by making  it easier to debug parts of an application.
 
   - Examples of UI/UX extensions are [nvim-dap-virtual-text][7] and [nvim-dap-ui][15]
   - Examples for language specific extensions include [nvim-jdtls][8] and [nvim-dap-python][9]
