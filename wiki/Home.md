@@ -1,0 +1,6 @@
+- [Debug Adapter Installation](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation)
+- [Extensions](https://github.com/mfussenegger/nvim-dap/wiki/Extensions)
+- [Cookbook](https://github.com/mfussenegger/nvim-dap/wiki/Cookbook)
+- [Local and Remote Debugging with Docker](https://github.com/mfussenegger/nvim-dap/wiki/Local-and-Remote-Debugging-with-Docker)
+- [Troubleshooting](https://github.com/mfussenegger/nvim-dap/wiki/Troubleshooting)
+- [Debug symbols in various languages and build systems](https://github.com/mfussenegger/nvim-dap/wiki/Debug-symbols-in-various-languages-and-build-systems)
