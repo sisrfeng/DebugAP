@@ -26,15 +26,6 @@
 ---
 
 
-Some examples below are in lua, if you want to set up `nvim-dap` in a `.vim` file, you have to wrap the code blocks like this:
-
-```
-lua <<EOF
--- lua code goes here
-EOF
-```
-
-See `:help lua-commands`
 
 
 ## Python
@@ -47,29 +38,30 @@ python -m venv path/to/virtualenvs/debugpy
 path/to/virtualenvs/debugpy/bin/python -m pip install debugpy
 ```
 
-You can then either use [nvim-dap-python][1] - it comes with adapter and configurations definitions - or define them manually as follows:
-
-
+You can then either use [nvim-dap-python][1] - it comes with adapter and configurations definitions 
+                 or define them manually as follows:  
 ```lua
 local dap = require('dap')
 dap.adapters.python = {
-  type = 'executable';
+  type = 'executable';  -- adapter的type还可以是'server', 
   command = 'path/to/virtualenvs/debugpy/bin/python';
   args = { '-m', 'debugpy.adapter' };
 }
 ```
-
-
+ 
 ```lua
 local dap = require('dap')
+-- 为啥又要写一次dap = ...
+-- debugee的configurations?
 dap.configurations.python = {
   {
     -- The first three options are required by nvim-dap
     type = 'python'; -- the type here established the link to the adapter definition: `dap.adapters.python`
     request = 'launch';
-    name = "Launch file";
+    name = "我的xxx";
 
-    -- Options below are for debugpy, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for supported options
+    -- Options below are for debugpy,
+    -- see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for supported options
 
     program = "${file}"; -- This configuration will launch the current file if used.
     pythonPath = function()
